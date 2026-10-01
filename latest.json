@@ -1,0 +1,11 @@
+{
+  "version": "0.1.79",
+  "notes": "Construir el modelo en Tekla desde la ficha: abre Tekla Structures 2026 con un modelo nuevo y vacío, usa Revisar Tekla, elige el concreto y Construir en Tekla. La app pone la retícula y las columnas, trabes, muros y losas, mide cada pieza y deshace todo si algo no coincide. Tus modelos de Tekla no se tocan.",
+  "pub_date": "2026-10-01T20:13:21.067Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRc0ZOQ0dEMWsvQzBWdE5qL1k0M3FrdHBUaWUxZTRDWkZMTk9UUENMajA4L20yZHY1Mk5td0xkc21TdktsNHJuVndEK0lIL0FUTFhLL1ZrSzFQUkZaWnNzSWtsVk81aUFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwODg1NTYzCWZpbGU6RXN0cnVjdHVyaXN0YV8wLjEuNzlfeDY0LXNldHVwLmV4ZQo4N3lwUGdwazI3L1dINDEvaEp1cDVGa1FkNk9PbUs2YmxSNUNjMkxvaU5jYmhueGJVQkIweWxjZnYwUE5hSjZhN1JQeVpFNElDMW45a3h6eVZkYXRBQT09Cg==",
+      "url": "https://github.com/diegosamano23-pixel/estructurista-actualizaciones/releases/download/v0.1.79/Estructurista_0.1.79_x64-setup.exe"
+    }
+  }
+}

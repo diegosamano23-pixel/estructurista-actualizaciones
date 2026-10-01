@@ -1,0 +1,11 @@
+{
+  "version": "0.1.79",
+  "instalador": "Estructurista_0.1.79_x64-setup.exe",
+  "sha256": "82b2b5847a023b81508b70a3ffacd1951bc666c717838b55f42a4276d27b7e8b",
+  "bytes": 203940766,
+  "partes": [
+    "Estructurista_0.1.79_x64-setup.exe.parte01",
+    "Estructurista_0.1.79_x64-setup.exe.parte02",
+    "Estructurista_0.1.79_x64-setup.exe.parte03"
+  ]
+}
