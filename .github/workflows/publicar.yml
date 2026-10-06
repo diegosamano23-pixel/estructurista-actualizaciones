@@ -1,0 +1,48 @@
+# Canal de actualizaciones de Estructurista (29-sep-2026).
+#
+# La app instalada consulta releases/latest/download/latest.json de este repositorio. Para publicar una versión,
+# app/scripts/publicar-actualizacion.mjs empuja a la rama `publicar` el instalador partido en trozos de menos de
+# 100 MB (límite de GitHub por archivo), su latest.json y un manifiesto con la huella SHA-256. Aquí se unen los
+# trozos, se comprueba la huella y se crea (o actualiza) la versión con el instalador y latest.json.
+#
+# La firma del instalador (latest.json → signature) la hizo la llave privada de Estructurista, que no está aquí:
+# la app rechaza cualquier instalador que no coincida con ella, aunque alguien lo suba a este repositorio.
+name: Publicar versión
+
+on:
+  push:
+    branches: [publicar]
+
+permissions:
+  contents: write
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: publicar
+
+      - name: Unir el instalador y comprobar su huella
+        run: |
+          set -euo pipefail
+          instalador=$(jq -r .instalador manifiesto.json)
+          jq -r '.partes[]' manifiesto.json | xargs cat > "$instalador"
+          echo "$(jq -r .sha256 manifiesto.json)  $instalador" | sha256sum -c -
+          test "$(jq -r .version manifiesto.json)" = "$(jq -r .version latest.json)"
+          echo "VERSION=$(jq -r .version latest.json)" >> "$GITHUB_ENV"
+          echo "INSTALADOR=$instalador" >> "$GITHUB_ENV"
+
+      - name: Crear la versión
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          if gh release view "v$VERSION" > /dev/null 2>&1; then
+            gh release upload "v$VERSION" "$INSTALADOR" latest.json --clobber
+          else
+            gh release create "v$VERSION" "$INSTALADOR" latest.json --target main \
+              --title "Estructurista $VERSION" --notes "$(jq -r .notes latest.json)" --latest
+          fi

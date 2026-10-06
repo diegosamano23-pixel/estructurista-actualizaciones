@@ -1,0 +1,11 @@
+{
+  "version": "0.1.81",
+  "notes": "Guías de ETABS revisadas contra el programa: 19 rutas de menú corregidas (por ejemplo, el caso modal está en Define → Load Cases y la revisión de duplicados es Analyze → Check Model) y pasos que faltaban (Model Initialization, losa nervada en una dirección, archivo AISC16M). Botón «Imagen de cómo hacerlo» con capturas reales de ETABS 22.6 y números en el orden del clic. Pasos de Robot reescritos con los comandos del manual de Autodesk.",
+  "pub_date": "2026-10-06T07:53:21.109Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRc0ZOQ0dEMWsvQzcxZ3RxRzh1MHlLN3RGdzBhYnk3K2l1TUpvbWpVNDV1WVZ2Tm1RN0ZhbGMyY0U3TmZlT3BTRldFb1o0QU0rengxYnNWc1RtYm85MHdSdFVkSVFQWXdnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxMjczMTc1CWZpbGU6RXN0cnVjdHVyaXN0YV8wLjEuODFfeDY0LXNldHVwLmV4ZQp6dHlXbnIzUTJFdWJVRGYvVHpnZW9FdTlySno2SlBCNnNzbXFKSGVhMGlsY1BteCtIdGI1L20yVDFYM0ZjdXd6eTd3eWRCNkMyMXpmN2FDYzNicDlBQT09Cg==",
+      "url": "https://github.com/diegosamano23-pixel/estructurista-actualizaciones/releases/download/v0.1.81/Estructurista_0.1.81_x64-setup.exe"
+    }
+  }
+}
